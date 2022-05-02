@@ -19,6 +19,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { TableModule } from 'primeng/table';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -36,13 +41,36 @@ import { TableModule } from 'primeng/table';
     MultiSelectModule,
     InputTextareaModule,
     InputTextModule,
-
+    DialogModule,
+    FormsModule,
+    ConfirmDialogModule,
     CheckboxModule,
     RadioButtonModule,
-    FormsModule,
+
+    ButtonModule,
     DropdownModule,
     InputTextareaModule,
     TableModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    TableModule,
+    CalendarModule,
+
+    DialogModule,
+    MultiSelectModule,
+    ContextMenuModule,
+    DropdownModule,
+    ButtonModule,
+    ToastModule,
+    InputTextModule,
+
+    HttpClientModule,
+
+    FormsModule,
+    RadioButtonModule,
+    InputNumberModule,
+    ConfirmDialogModule,
+    InputTextareaModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

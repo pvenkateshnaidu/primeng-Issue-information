@@ -1,13 +1,15 @@
-import { Component } from "@angular/core";
-import { FilterService } from "primeng/api";
-import { CountryService } from "./countryservice";
+import { Component } from '@angular/core';
+import { FilterService } from 'primeng/api';
+import { CountryService } from './countryservice';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  providers: [CountryService, FilterService]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  providers: [CountryService, FilterService],
 })
 export class AppComponent {
+  powerpackDialog: boolean;
+
   countries: any[];
 
   cascadeSelectCountries: any[];
@@ -39,95 +41,100 @@ export class AppComponent {
   valueIconLeft: any;
 
   valueIconRight: any;
-
+  openNew() {
+    this.powerpackDialog = true;
+  }
+  hideDialog() {
+    this.powerpackDialog = false;
+  }
   constructor(private countryService: CountryService) {
     this.cities = [
-      { name: "New York", code: "NY" },
-      { name: "Rome", code: "RM" },
-      { name: "London", code: "LDN" },
-      { name: "Istanbul", code: "IST" },
-      { name: "Paris", code: "PRS" }
+      { name: 'New York', code: 'NY' },
+      { name: 'Rome', code: 'RM' },
+      { name: 'London', code: 'LDN' },
+      { name: 'Istanbul', code: 'IST' },
+      { name: 'Paris', code: 'PRS' },
     ];
   }
 
   ngOnInit() {
-    this.countryService.getCountries().then(countries => {
+    this.countryService.getCountries().then((countries) => {
       this.countries = countries;
     });
 
     this.cascadeSelectCountries = [
       {
-        name: "Australia",
-        code: "AU",
+        name: 'Australia',
+        code: 'AU',
         states: [
           {
-            name: "New South Wales",
+            name: 'New South Wales',
             cities: [
-              { cname: "Sydney", code: "A-SY" },
-              { cname: "Newcastle", code: "A-NE" },
-              { cname: "Wollongong", code: "A-WO" }
-            ]
+              { cname: 'Sydney', code: 'A-SY' },
+              { cname: 'Newcastle', code: 'A-NE' },
+              { cname: 'Wollongong', code: 'A-WO' },
+            ],
           },
           {
-            name: "Queensland",
+            name: 'Queensland',
             cities: [
-              { cname: "Brisbane", code: "A-BR" },
-              { cname: "Townsville", code: "A-TO" }
-            ]
-          }
-        ]
+              { cname: 'Brisbane', code: 'A-BR' },
+              { cname: 'Townsville', code: 'A-TO' },
+            ],
+          },
+        ],
       },
       {
-        name: "Canada",
-        code: "CA",
+        name: 'Canada',
+        code: 'CA',
         states: [
           {
-            name: "Quebec",
+            name: 'Quebec',
             cities: [
-              { cname: "Montreal", code: "C-MO" },
-              { cname: "Quebec City", code: "C-QU" }
-            ]
+              { cname: 'Montreal', code: 'C-MO' },
+              { cname: 'Quebec City', code: 'C-QU' },
+            ],
           },
           {
-            name: "Ontario",
+            name: 'Ontario',
             cities: [
-              { cname: "Ottawa", code: "C-OT" },
-              { cname: "Toronto", code: "C-TO" }
-            ]
-          }
-        ]
+              { cname: 'Ottawa', code: 'C-OT' },
+              { cname: 'Toronto', code: 'C-TO' },
+            ],
+          },
+        ],
       },
       {
-        name: "United States",
-        code: "US",
+        name: 'United States',
+        code: 'US',
         states: [
           {
-            name: "California",
+            name: 'California',
             cities: [
-              { cname: "Los Angeles", code: "US-LA" },
-              { cname: "San Diego", code: "US-SD" },
-              { cname: "San Francisco", code: "US-SF" }
-            ]
+              { cname: 'Los Angeles', code: 'US-LA' },
+              { cname: 'San Diego', code: 'US-SD' },
+              { cname: 'San Francisco', code: 'US-SF' },
+            ],
           },
           {
-            name: "Florida",
+            name: 'Florida',
             cities: [
-              { cname: "Jacksonville", code: "US-JA" },
-              { cname: "Miami", code: "US-MI" },
-              { cname: "Tampa", code: "US-TA" },
-              { cname: "Orlando", code: "US-OR" }
-            ]
+              { cname: 'Jacksonville', code: 'US-JA' },
+              { cname: 'Miami', code: 'US-MI' },
+              { cname: 'Tampa', code: 'US-TA' },
+              { cname: 'Orlando', code: 'US-OR' },
+            ],
           },
           {
-            name: "Texas",
+            name: 'Texas',
             cities: [
-              { cname: "Austin", code: "US-AU" },
-              { cname: "Dallas", code: "US-DA" },
-              { cname: "Houston", code: "US-HO" }
-            ]
-          }
-        ]
-      }
+              { cname: 'Austin', code: 'US-AU' },
+              { cname: 'Dallas', code: 'US-DA' },
+              { cname: 'Houston', code: 'US-HO' },
+            ],
+          },
+        ],
+      },
     ];
   }
 
