@@ -107,13 +107,12 @@
       "
     >
       <p-button
-        pButton
         pRipple
         label="Cancel"
         icon="pi pi-times"
         class="mr-3"
       ></p-button>
-      <p-button pButton pRipple label="Save" icon="pi pi-check"></p-button>
+      <p-button pRipple label="ok" icon="pi pi-check"></p-button>
     </div>
   </div>
 </div>
@@ -165,7 +164,6 @@
       <div class="col-12 md:col-5"></div>
       <div class="col-12 md:col-4">
         <button
-          pButton
           pRipple
           type="button"
           label="Add to lis"
@@ -185,20 +183,83 @@
   </ng-template>
   <ng-template pTemplate="footer">
     <p-button
-      pButton
       pRipple
       label="Cancel"
       icon="pi pi-times"
       class="p-button-text"
       (click)="hideDialog()"
     ></p-button>
-    <p-button
-      pButton
-      pRipple
-      label="Save"
-      icon="pi pi-check"
-      class="p-button-text"
-    >
+    <p-button pRipple label="ok" icon="pi pi-check" class="p-button-text">
     </p-button>
   </ng-template>
 </p-dialog>
+
+<!-- ICM Infomration-->
+<div class="card">
+  <h5>Enter ICM Information</h5>
+  <div class="field grid">
+    <label for="firstname4" class="col-12 mb-2 md:col-4 md:mb-0"
+      >Escalate Issue?</label
+    >
+    <div class="col-12 md:col-4">
+      <p-dropdown
+        optionLabel="name"
+        placeholder="No (Normal Priority"
+      ></p-dropdown>
+    </div>
+    <div class="field col-12 md:col-4">
+      <p-calendar
+        [(ngModel)]="date3"
+        [showIcon]="true"
+        inputId="icon"
+        placeholder="Select a Date"
+      ></p-calendar>
+    </div>
+  </div>
+  <div class="field grid">
+    <label for="lastname4" class="col-12 mb-2 md:col-4 md:mb-0"
+      >Date to Yellow(DTY)</label
+    >
+    <div class="col-12 md:col-8">
+      <p-calendar
+        [(ngModel)]="date3"
+        [showIcon]="true"
+        inputId="icon"
+        placeholder="Select a Date"
+      ></p-calendar>
+    </div>
+  </div>
+  <div class="field grid">
+    <label for="lastname4" class="col-12 mb-2 md:col-4 md:mb-0"
+      >Date to Green(DTG)</label
+    >
+    <div class="col-12 md:col-8">
+      <p-calendar
+        [(ngModel)]="date3"
+        [showIcon]="true"
+        inputId="icon"
+        placeholder="Select a Date"
+      ></p-calendar>
+    </div>
+  </div>
+  <div class="field grid">
+    <div
+      class="
+        col-12
+        md:col-12
+        flex
+        align-items-center
+        justify-content-center
+        mt-5
+      "
+    >
+      <p-button
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="mr-3"
+      ></p-button>
+      <p-button pRipple label="ok" icon="pi pi-check"></p-button>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { CalendarModule } from 'primeng/calendar';
+
 import { ChipsModule } from 'primeng/chips';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -22,7 +22,7 @@ import { TableModule } from 'primeng/table';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-
+import { CalendarModule } from 'primeng/calendar';
 @NgModule({
   imports: [
     BrowserModule,
