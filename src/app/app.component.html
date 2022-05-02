@@ -263,3 +263,148 @@
     </div>
   </div>
 </div>
+<div class="card" style="margin-top: 50px">
+  <div class="field gird">
+    <label for="firstname3" class="col-fixed">Issue Title</label>
+    <div class="col-4">
+      <input id="firstname3" style="width:100%" type="text" pInputText />
+    </div>
+    <label for="firstname" class="col">AIMS</label>
+    <div class="col-4">
+      <input id="firstname" style="width:100%" type="text" pInputText />
+    </div>
+  </div>
+  <div class="field gird">
+    <label for="lastname3" class="col-2">Source</label>
+    <div class="col">
+      <input id="lastname3" style="width:100%" type="text" pInputText />
+    </div>
+    <label for="lastname3" class="col-2">Champion</label>
+    <div class="col">
+      <input id="lastname3" style="width:100%" type="text" pInputText />
+    </div>
+  </div>
+  <div class="field gird">
+    <label for="lastname3" class="col-2">Issue Description</label>
+    <div class="col-4">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+    <div class="col-6">
+      <div class="field gird">
+        <label for="lastname3" class="col-4">Team Leader</label>
+        <div class="col-8" style="padding-bottom: 20px">
+          <input id="lastname3" style="width:100%" type="text" pInputText />
+        </div>
+        <label for="lastname3" class="col-4">Team</label>
+        <div class="col-8">
+          <input id="lastname3" style="width:100%" type="text" pInputText />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Containment</label>
+    <div class="col-10">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Root Cause</label>
+    <div class="col-10">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Root Cause</label>
+    <div class="col-10">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Corrective Action</label>
+    <div class="col-10">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+  </div>
+  <div class="field gird">
+    <label for="lastname3" class="col-2">Work Plan</label>
+    <div class="col">
+      <button pButton type="button" label="View / Edit Work Plan"></button>
+    </div>
+
+    <div class="col">
+      <button pButton type="button" label="ICM Information"></button>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Preventative Action</label>
+    <div class="col-8">
+      <textarea
+        id="address"
+        type="text"
+        rows="5"
+        style="width:100%"
+        pInputTextarea
+      ></textarea>
+    </div>
+
+    <div class="col-2">
+      <label for="lastname3">Preventative Action</label><br />
+      <p-checkbox name="groupname" value="val1" checked></p-checkbox>
+    </div>
+  </div>
+  <div class="field gird formgrid">
+    <label for="lastname3" class="col-2">Risk Projections</label>
+    <div class="col-10">
+      <p-table
+        [value]="projections"
+        styleClass="p-datatable-gridlines p-datatable-striped"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Previous Milestone</th>
+            <th>TT 21-04-2022</th>
+            <th>Next Milestone</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td></td>
+            <td style="background:red">{{ product.name }}</td>
+            <td style="background:yellow">{{ product.code }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
