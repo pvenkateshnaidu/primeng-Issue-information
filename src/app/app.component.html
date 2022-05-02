@@ -127,30 +127,59 @@
   styleClass="p-fluid"
 >
   <ng-template pTemplate="content">
-    <div class="field">
-      <label for="name">Name</label>
-      <input type="text" pInputText id="name" autofocus />
-    </div>
-    <div class="field">
-      <label for="description">Description</label>
-      <textarea
-        id="description"
-        pInputTextarea
-        required
-        rows="3"
-        cols="20"
-      ></textarea>
+    <div class="field grid">
+      <label for="firstname4" class="col-12 mb-2 md:col-3 md:mb-0"
+        >Engine</label
+      >
+      <div class="col-12 md:col-3">
+        <input
+          id="lastname4"
+          pInputText
+          type="text"
+          placeholder="eg. 5.0"
+          class="inputfield w-full"
+        />
+      </div>
+      <p-dropdown optionLabel="name" class="col-12 md:col-2"></p-dropdown>
+      <p-dropdown optionLabel="name" class="col-12 md:col-2"></p-dropdown>
+      <p-dropdown optionLabel="name" class="col-12 md:col-2"></p-dropdown>
     </div>
 
-    <div class="formgrid grid">
-      <div class="field col">
-        <label for="price">Price</label>
-        <p-inputNumber
-          id="price"
-          mode="currency"
-          currency="USD"
-          locale="en-US"
-        ></p-inputNumber>
+    <div class="field grid">
+      <label for="firstname4" class="col-12 mb-2 md:col-3">Transmission</label>
+      <p-dropdown optionLabel="name" class="col-12 md:col-3"></p-dropdown>
+      <p-dropdown optionLabel="name" class="col-12 md:col-3"></p-dropdown>
+      <div class="col-12 md:col-3">
+        <input
+          id="lastname4"
+          pInputText
+          type="text"
+          placeholder="eg. 5.0"
+          class="inputfield w-full"
+        />
+      </div>
+    </div>
+    <div class="field grid">
+      <label for="firstname4" class="col-12 mb-2 md:col-3">PowerPack</label>
+
+      <div class="col-12 md:col-5"></div>
+      <div class="col-12 md:col-4">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Add to lis"
+          class="p-button-outlined p-button-secondary"
+        ></button>
+      </div>
+    </div>
+    <div class="field grid">
+      <label for="firstname4" class="col-12 mb-2 md:col-3"
+        >Select PowerPack</label
+      >
+
+      <div class="col-12 md:col-5">
+        <p-dropdown optionLabel="name" class="col-12 md:col-3"></p-dropdown>
       </div>
     </div>
   </ng-template>
